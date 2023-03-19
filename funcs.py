@@ -1,13 +1,23 @@
+## User Inputs
+
+# discord bot applcation token
+bot_token = ""
+
+# your server
+guild_id = ""
+
+## End of User INputs
+
 import os
 
+
 def set_environ():
-    temp_dict = os.environ
-    if temp_dict!=None:
-        print("read environ from machine")
-    else:
+    if bot_token or guild_id == None:
         print("read environ from funcs.py")
-        os.environ["BOT_TOKEN"] = "REPLACE THIS WITH YOUR BOT TOKEN"
-        os.environ["GUILD_ID"] = "REPLACE THIS WITH YOUR SERVER ID"
+        os.environ["BOT_TOKEN"] = bot_token
+        os.environ["GUILD_ID"] = guild_id
+    else:
+        print("read environ from machine")
 
     return 0
 
