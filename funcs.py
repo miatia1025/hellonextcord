@@ -12,7 +12,9 @@ import os
 
 
 def set_environ():
-
+    from dotenv import load_dotenv
+    load_dotenv()
+    
     return 0
 
 def set_initial_variables():

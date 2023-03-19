@@ -3,7 +3,7 @@ import os
 from funcs import set_initial_variables
 
 lib_path = set_initial_variables()
-if os.path.exists(lib_path):
+if 1==0:#os.path.exists(lib_path):
     print("import set_environ() from miatialib.py")
 
     # for api key and etcetcetc...
