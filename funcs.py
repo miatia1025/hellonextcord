@@ -2,8 +2,10 @@ import os
 
 def set_environ():
     if os.environ:
+        print("read environ from machine")
         pass
     else:
+        print("read environ from funcs.py")
         os.environ["BOT_TOKEN"] = "REPLACE THIS WITH YOUR BOT TOKEN"
         os.environ["GUILD_ID"] = "REPLACE THIS WITH YOUR SERVER ID"
 
