@@ -12,8 +12,8 @@ import os
 
 
 def set_environ():
-    os.environ["BOT_TOKEN"] = bot_token if bot_token != None else os.environ["BOT_TOKEN"]
-    os.environ["GUILD_ID"] = guild_id if guild_id != None else os.environ["GUILD_ID"]
+    os.environ["BOT_TOKEN"] = bot_token if bot_token != "" else os.environ["BOT_TOKEN"]
+    os.environ["GUILD_ID"] = guild_id if guild_id != "" else os.environ["GUILD_ID"]
 
     return 0
 
