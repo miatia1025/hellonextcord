@@ -10,13 +10,9 @@ guild_id = ""
 
 import os
 
-
 def set_environ():
-    from dotenv import load_dotenv
-    load_dotenv()
-
-    os.environ["BOT_TOKEN"] = bot_token if bot_token != "" else os.environ["BOT_TOKEN"]
-    os.environ["GUILD_ID"] = guild_id if guild_id != "" else os.environ["GUILD_ID"]
+    os.environ["BOT_TOKEN"] = bot_token if bot_token != "" else os.environ.get("BOT_TOKEN")
+    os.environ["GUILD_ID"] = guild_id if guild_id != "" else os.environ.get("GUILD_ID")
 
     return 0
 
