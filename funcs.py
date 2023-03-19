@@ -12,12 +12,8 @@ import os
 
 
 def set_environ():
-    if bot_token or guild_id == None:
-        print("read environ from funcs.py")
-        os.environ["BOT_TOKEN"] = bot_token
-        os.environ["GUILD_ID"] = guild_id
-    else:
-        print("read environ from machine")
+    os.environ["BOT_TOKEN"] = bot_token if bot_token != None else os.environ["BOT_TOKEN"]
+    os.environ["GUILD_ID"] = guild_id if guild_id != None else os.environ["GUILD_ID"]
 
     return 0
 
