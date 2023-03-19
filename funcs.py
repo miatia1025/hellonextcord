@@ -11,8 +11,8 @@ guild_id = ""
 import os
 
 def set_environ():
-    os.environ["BOT_TOKEN"] = bot_token if bot_token != "" else os.environ.get("BOT_TOKEN")
-    os.environ["GUILD_ID"] = guild_id if guild_id != "" else os.environ.get("GUILD_ID")
+    os.environ["BOT_TOKEN"] = bot_token if bot_token != "" else os.getenv("BOT_TOKEN")
+    os.environ["GUILD_ID"] = guild_id if guild_id != "" else os.getenv("GUILD_ID")
 
     return 0
 
