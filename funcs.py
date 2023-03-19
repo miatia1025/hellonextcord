@@ -1,8 +1,11 @@
 import os
 
 def set_environ():
-    os.environ["BOT_TOKEN"] = "REPLACE THIS WITH YOUR BOT TOKEN"
-    os.environ["GUILD_ID"] = "REPLACE THIS WITH YOUR SERVER ID"
+    if os.environ:
+        pass
+    else:
+        os.environ["BOT_TOKEN"] = "REPLACE THIS WITH YOUR BOT TOKEN"
+        os.environ["GUILD_ID"] = "REPLACE THIS WITH YOUR SERVER ID"
 
     return 0
 
