@@ -1,7 +1,8 @@
 import os
 
 def set_environ():
-    if os.environ:
+    temp_dict = os.environ
+    if temp_dict!=None:
         print("read environ from machine")
     else:
         print("read environ from funcs.py")
