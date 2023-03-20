@@ -3,7 +3,7 @@ import os
 from funcs import set_initial_variables
 
 lib_path = set_initial_variables()
-if os.path.exists(lib_path):
+if 1==0:#os.path.exists(lib_path):
     print("import set_environ() from miatialib.py")
 
     # for api key and etcetcetc...
@@ -23,7 +23,7 @@ else:
 import nextcord
 from nextcord.ext import commands
 
-TESTING_GUILD_ID = int(os.environ["GUILD_ID"])  # Replace with your guild ID
+TESTING_GUILD_ID = int(os.getenv("GUILD_ID"))  # Replace with your guild ID
 
 bot = commands.Bot()
 
@@ -36,6 +36,6 @@ async def hello(interaction: nextcord.Interaction):
     await interaction.send("Hello!")
 
 ic(TESTING_GUILD_ID)
-ic(os.environ["BOT_TOKEN"])
+ic(os.getenv("BOT_TOKEN"))
 
-bot.run(os.environ["BOT_TOKEN"])
+bot.run(os.getenv("BOT_TOKEN"))

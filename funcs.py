@@ -1,18 +1,18 @@
 ## User Inputs
 
 # discord bot applcation token
-bot_token = ""
+bot_token = "MTA0NzEwNjcwNzAxNDMwNzg3MQ.GTJp5D.P4ckqE2Qv3FQ1lUP43xWn6fCgxn5WgoPhChYIk"
 
 # your server
-guild_id = ""
+guild_id = "952163309560414249"
 
 ## End of User INputs
 
 import os
 
 def set_environ():
-    os.environ["BOT_TOKEN"] = os.getenv("BOT_TOKEN") #bot_token if bot_token != "" else os.getenv("BOT_TOKEN")
-    os.environ["GUILD_ID"] = os.getenv("GUILD_ID") #guild_id if guild_id != "" else os.getenv("GUILD_ID")
+    os.environ["BOT_TOKEN"] = bot_token if bot_token else os.getenv("BOT_TOKEN")
+    os.environ["GUILD_ID"] = guild_id if guild_id else os.getenv("GUILD_ID")
 
     return 0
 
