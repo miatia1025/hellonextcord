@@ -1,10 +1,10 @@
 ## User Inputs
 
 # discord bot applcation token
-bot_token = "MTA0NzEwNjcwNzAxNDMwNzg3MQ.GTJp5D.P4ckqE2Qv3FQ1lUP43xWn6fCgxn5WgoPhChYIk"
+bot_token = ""
 
 # your server
-guild_id = "952163309560414249"
+guild_id = ""
 
 ## End of User INputs
 
